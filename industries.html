@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Industries We Serve | FAS Services</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; color:#1e293b; background:#fff; }
+    header { position:fixed; top:0; width:100%; background:#fff; border-bottom:1px solid #e2e8f0; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:50; }
+    header nav a { margin:0 10px; font-size:14px; font-weight:500; color:#475569; text-decoration:none; }
+    header nav a:hover { color:#1e293b; }
+    section { padding:100px 20px 60px; max-width:1000px; margin:0 auto; }
+    h1,h2 { margin-top:0; }
+    .card { background:#f8fafc; padding:20px; border-radius:10px; margin:20px 0; }
+    footer { padding:20px; border-top:1px solid #e2e8f0; text-align:center; font-size:14px; color:#64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>FAS Services</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section>
+    <h1>Industries We Serve</h1>
+    <p>Our expertise extends across multiple sectors, enabling tailored solutions.</p>
+    <div class="card"><h3>Oil & Gas / Refineries</h3><p>Support for upstream, midstream, and downstream operations.</p></div>
+    <div class="card"><h3>Power Generation</h3><p>Solutions for conventional and renewable power plants.</p></div>
+    <div class="card"><h3>Chemical Processing</h3><p>Fire protection, corrosion prevention, and process equipment support.</p></div>
+    <div class="card"><h3>Clean Energy</h3><p>Engineering solutions for solar, wind, and renewable projects.</p></div>
+  </section>
+  <footer>© <span id="year"></span> FAS Services. All rights reserved.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | FAS Services</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; color:#1e293b; background:#fff; }
+    header { position:fixed; top:0; width:100%; background:#fff; border-bottom:1px solid #e2e8f0; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:50; }
+    header nav a { margin:0 10px; font-size:14px; font-weight:500; color:#475569; text-decoration:none; }
+    header nav a:hover { color:#1e293b; }
+    section { padding:100px 20px 60px; max-width:1000px; margin:0 auto; }
+    h1,h2,h3 { margin-top:0; }
+    .card { background:#f8fafc; padding:20px; border-radius:10px; margin:20px 0; }
+    footer { padding:20px; border-top:1px solid #e2e8f0; text-align:center; font-size:14px; color:#64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>FAS Services</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section>
+    <h1>About FAS Services</h1>
+    <p>Established over 25 years ago, FAS Services has become a trusted provider of engineering-driven solutions 
+    across the energy, oil & gas, power generation, and industrial sectors.</p>
+    <h2>Our History</h2>
+    <p>From a modest beginning in Saudi Arabia, FAS Services has grown into a regional player 
+    with multiple offices and a diverse portfolio.</p>
+    <h2>Our Vision</h2>
+    <div class="card">To be recognized as a leading regional engineering solutions provider.</div>
+    <h2>Our Mission</h2>
+    <div class="card">To deliver engineering-driven solutions backed by deep technical expertise, 
+    long-term partnerships, and a commitment to safety, quality, and sustainability.</div>
+    <h2>Core Values</h2>
+    <ul>
+      <li><strong>Integrity:</strong> We uphold the highest ethical standards.</li>
+      <li><strong>Innovation:</strong> We embrace new technologies and methods.</li>
+      <li><strong>Safety:</strong> Protecting people and assets is our top priority.</li>
+      <li><strong>Excellence:</strong> We deliver results that exceed expectations.</li>
+      <li><strong>Sustainability:</strong> We support energy-efficient and environmentally responsible practices.</li>
+    </ul>
+    <h2>Leadership</h2>
+    <p>Our leadership team brings decades of combined experience across multiple industries.</p>
+  </section>
+  <footer>© <span id="year"></span> FAS Services. All rights reserved.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
