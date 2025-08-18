@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAS Services | Home</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; color:#1e293b; background:#fff; }
+    header { position:fixed; top:0; width:100%; background:#fff; border-bottom:1px solid #e2e8f0; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:50; }
+    header nav a { margin:0 10px; font-size:14px; font-weight:500; color:#475569; text-decoration:none; }
+    header nav a:hover { color:#1e293b; }
+    .hero { padding:120px 20px 80px; text-align:center; background: linear-gradient(-45deg, #e0f2fe, #fce7f3, #ede9fe, #d1fae5); background-size: 400% 400%; animation: gradientBG 12s ease infinite; }
+    @keyframes gradientBG { 0% {background-position:0% 50%;} 50% {background-position:100% 50%;} 100% {background-position:0% 50%;} }
+    h1,h2 { margin:0; }
+    .btn { display:inline-block; padding:12px 20px; border-radius:8px; font-weight:600; cursor:pointer; transition:0.3s; margin:5px; }
+    .btn-primary { background:#334155; color:white; }
+    .btn-primary:hover { background:#1e293b; }
+    footer { padding:20px; border-top:1px solid #e2e8f0; text-align:center; font-size:14px; color:#64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>FAS Services</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Engineering-Driven Industrial Solutions</h1>
+    <p style="max-width:700px;margin:15px auto;">
+      With over 25 years of excellence, FAS Services supplies advanced materials and specialized 
+      technical services across the energy and industrial sectors — delivering performance, safety, and lasting value.
+    </p>
+    <a href="services.html" class="btn btn-primary">Explore Services</a>
+    <a href="contact.html" class="btn">Contact Us</a>
+  </section>
+  <section style="padding:50px 20px;text-align:center;">
+    <h2>Why Choose Us?</h2>
+    <p style="max-width:700px;margin:15px auto;">
+      We deliver smart engineering and reliable energy solutions, backed by decades of expertise and 
+      a commitment to safety, innovation, and client success.
+    </p>
+  </section>
+  <footer>© <span id="year"></span> FAS Services. All rights reserved.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
