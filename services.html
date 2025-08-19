@@ -5,14 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Our Services | FAS Services</title>
   <style>
-    body { margin:0; font-family: Arial, sans-serif; color:#1e293b; background:#fff; }
-    header { position:fixed; top:0; width:100%; background:#fff; border-bottom:1px solid #e2e8f0; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:50; }
-    header nav a { margin:0 10px; font-size:14px; font-weight:500; color:#475569; text-decoration:none; }
+    body { 
+      margin:0; 
+      font-family: Arial, sans-serif; 
+      color:#1e293b; 
+      background:#fff; 
+      display:flex; 
+      flex-direction:column; 
+      min-height:100vh; /* ✅ keeps footer bottom */
+    }
+    header { 
+      position:fixed; 
+      top:0; 
+      width:100%; 
+      background:#fff; 
+      border-bottom:1px solid #e2e8f0; 
+      padding:15px 40px;   /* ✅ consistent with all pages */
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center; 
+      z-index:50; 
+      box-sizing:border-box;
+    }
+    header nav {
+      flex:1;
+      display:flex;
+      justify-content:flex-end; /* ✅ prevents cutoff */
+    }
+    header nav a { 
+      margin:0 10px; 
+      font-size:14px; 
+      font-weight:500; 
+      color:#475569; 
+      text-decoration:none; 
+    }
     header nav a:hover { color:#1e293b; }
-    section { padding:100px 20px 60px; max-width:1000px; margin:0 auto; }
+
+    main {
+      flex:1; /* pushes footer down */
+    }
+
+    section { 
+      padding:100px 20px 60px; 
+      max-width:1000px; 
+      margin:0 auto; 
+    }
     h1,h2,h3 { margin-top:0; }
-    .card { background:#f8fafc; padding:20px; border-radius:10px; margin:20px 0; }
-    footer { padding:20px; border-top:1px solid #e2e8f0; text-align:center; font-size:14px; color:#64748b; }
+    .card { 
+      background:#f8fafc; 
+      padding:20px; 
+      border-radius:10px; 
+      margin:20px 0; 
+    }
+    footer { 
+      padding:20px; 
+      border-top:1px solid #e2e8f0; 
+      text-align:center; 
+      font-size:14px; 
+      color:#64748b; 
+    }
   </style>
 </head>
 <body>
@@ -26,38 +77,45 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <section>
-    <h1>Our Services</h1>
-    <p>FAS Services provides a wide range of technical and industrial services tailored to meet client needs.</p>
-    <div class="card"><h3>Protective Coating</h3><p>Specialized anti-corrosion and fireproofing solutions. FAS delivers advanced protective
-coatings, anti-corrosion, and fireproofing
-services. These solutions are designed to
-enhance durability, protect critical assets
-from corrosion, ensure fire safety, and
-extend the lifespan of structures and
-equipment.
-Advanced Material Supply
-Through its collaboration with esteemed
-global partners like DuraPol, FAS gains
-access to and supplies a portfolio of toptier
-protective materials.
-This includes innovative solutions
-specifically engineered for the most
-demanding environments:
-Glass Flake Epoxy Coatings.
-High-Temperature Coatings.
-Subsea & Splash Zone Coatings. </p></div>
-    <div class="card"><h3>Fire Fighting Systems</h3><p>Design, supply, installation, and maintenance.</p></div>
-    <div class="card"><h3>Thermal Solutions</h3><p>Comprehensive insulation, heat tracing, and audits.</p></div>
-    <div class="card"><h3>Generators & Motors</h3><p>Rewinding, load testing, preventive and corrective maintenance.</p></div>
-    <div class="card"><h3>HVAC Services</h3><p>Industrial HVAC systems with focus on efficiency.</p></div>
-    <div class="card"><h3>Manpower Supply</h3><p>Deployment of skilled engineers and tradesmen.</p></div>
-    <div class="card"><h3>Training & Certification</h3><p>Specialized NDT and safety training programs.</p></div>
-    <div class="card"><h3>Valves & Actuations</h3><p>Supply and service of industrial valves and actuators.</p></div>
-    <div class="card"><h3>Thermal Spray Cladding</h3><p>Arc and flame spray for corrosion and wear resistance.</p></div>
-    <div class="card"><h3>Flanges & Piping</h3><p>High-quality supply of flanges and piping components.</p></div>
-  </section>
-  <footer>© <span id="year"></span> FAS Services. All rights reserved.</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <main>
+    <section>
+      <h1>Our Services</h1>
+      <p>FAS Services provides a wide range of technical and industrial services tailored to meet client needs.</p>
+
+      <div class="card">
+        <h3>Protective Coating</h3>
+        <p>
+          Specialized anti-corrosion and fireproofing solutions. FAS delivers advanced protective
+          coatings, anti-corrosion, and fireproofing services. These solutions are designed to
+          enhance durability, protect critical assets from corrosion, ensure fire safety, and
+          extend the lifespan of structures and equipment.
+        </p>
+        <p><strong>Advanced Material Supply:</strong> Through its collaboration with esteemed global partners like DuraPol, FAS gains access to and supplies a portfolio of top-tier protective materials. This includes innovative solutions specifically engineered for the most demanding environments:</p>
+        <ul>
+          <li>Glass Flake Epoxy Coatings</li>
+          <li>High-Temperature Coatings</li>
+          <li>Subsea & Splash Zone Coatings</li>
+        </ul>
+      </div>
+
+      <div class="card"><h3>Fire Fighting Systems</h3><p>Design, supply, installation, and maintenance.</p></div>
+      <div class="card"><h3>Thermal Solutions</h3><p>Comprehensive insulation, heat tracing, and audits.</p></div>
+      <div class="card"><h3>Generators & Motors</h3><p>Rewinding, load testing, preventive and corrective maintenance.</p></div>
+      <div class="card"><h3>HVAC Services</h3><p>Industrial HVAC systems with focus on efficiency.</p></div>
+      <div class="card"><h3>Manpower Supply</h3><p>Deployment of skilled engineers and tradesmen.</p></div>
+      <div class="card"><h3>Training & Certification</h3><p>Specialized NDT and safety training programs.</p></div>
+      <div class="card"><h3>Valves & Actuations</h3><p>Supply and service of industrial valves and actuators.</p></div>
+      <div class="card"><h3>Thermal Spray Cladding</h3><p>Arc and flame spray for corrosion and wear resistance.</p></div>
+      <div class="card"><h3>Flanges & Piping</h3><p>High-quality supply of flanges and piping components.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> FAS Services. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
