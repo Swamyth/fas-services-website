@@ -5,15 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Us | FAS Services</title>
   <style>
-    body { margin:0; font-family: Arial, sans-serif; color:#1e293b; background:#fff; }
-    header { position:fixed; top:0; width:100%; background:#fff; border-bottom:1px solid #e2e8f0; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; z-index:50; }
-    header nav a { margin:0 10px; font-size:14px; font-weight:500; color:#475569; text-decoration:none; }
+    body { 
+      margin:0; 
+      font-family: Arial, sans-serif; 
+      color:#1e293b; 
+      background:#fff; 
+      display:flex; 
+      flex-direction:column; 
+      min-height:100vh; /* keeps footer bottom */
+    }
+    header { 
+      position:fixed; 
+      top:0; 
+      width:100%; 
+      background:#fff; 
+      border-bottom:1px solid #e2e8f0; 
+      padding:15px 40px;   /* ✅ consistent with other pages */
+      display:flex; 
+      justify-content:space-between; 
+      align-items:center; 
+      z-index:50; 
+      box-sizing:border-box;
+    }
+    header nav {
+      flex:1;
+      display:flex;
+      justify-content:flex-end; /* ✅ fixes cutoff */
+    }
+    header nav a { 
+      margin:0 10px; 
+      font-size:14px; 
+      font-weight:500; 
+      color:#475569; 
+      text-decoration:none; 
+    }
     header nav a:hover { color:#1e293b; }
-    section { padding:100px 20px 60px; max-width:900px; margin:0 auto; }
-    form input, form textarea { width:100%; padding:10px; margin:5px 0; border:1px solid #cbd5e1; border-radius:6px; }
-    form button { padding:12px 20px; border:none; background:#334155; color:#fff; border-radius:6px; cursor:pointer; }
+
+    main {
+      flex:1; /* pushes footer down */
+    }
+
+    section { 
+      padding:100px 20px 60px; 
+      max-width:900px; 
+      margin:0 auto; 
+    }
+    form input, form textarea { 
+      width:100%; 
+      padding:10px; 
+      margin:5px 0; 
+      border:1px solid #cbd5e1; 
+      border-radius:6px; 
+      font-size:14px;
+    }
+    form button { 
+      padding:12px 20px; 
+      border:none; 
+      background:#334155; 
+      color:#fff; 
+      border-radius:6px; 
+      cursor:pointer; 
+      font-size:14px;
+    }
     form button:hover { background:#1e293b; }
-    footer { padding:20px; border-top:1px solid #e2e8f0; text-align:center; font-size:14px; color:#64748b; }
+
+    footer { 
+      padding:20px; 
+      border-top:1px solid #e2e8f0; 
+      text-align:center; 
+      font-size:14px; 
+      color:#64748b; 
+    }
   </style>
 </head>
 <body>
@@ -27,28 +89,39 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <section>
-    <h1>Contact Us</h1>
-    <p>Reach out to us at any of our offices or send us a message.</p>
-    <h2>Head Office – Dammam</h2>
-    <p>Building No-7182, Office No-26, Dammam-32241, Saudi Arabia</p>
-    <p><strong>Tel:</strong> +966 (1) 38506000 | <strong>Email:</strong> info@fasservices.com</p>
-    <h2>Other Offices</h2>
-    <ul>
-      <li>Riyadh, Saudi Arabia</li>
-      <li>Jubail, Saudi Arabia</li>
-      <li>Dubai, UAE</li>
-      <li>India (Bangalore)</li>
-    </ul>
-    <h2>Send Us a Message</h2>
-    <form onsubmit="event.preventDefault(); alert('Thank you! We will get back to you soon.');">
-      <input required placeholder="Your Name">
-      <input type="email" required placeholder="Your Email">
-      <textarea required placeholder="Message" rows="5"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-  <footer>© <span id="year"></span> FAS Services. All rights reserved.</footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <main>
+    <section>
+      <h1>Contact Us</h1>
+      <p>Reach out to us at any of our offices or send us a message.</p>
+
+      <h2>Head Office – Dammam</h2>
+      <p>Building No-7182, Office No-26, Dammam-32241, Saudi Arabia</p>
+      <p><strong>Tel:</strong> +966 (1) 38506000 | <strong>Email:</strong> info@fasservices.com</p>
+
+      <h2>Other Offices</h2>
+      <ul>
+        <li>Riyadh, Saudi Arabia</li>
+        <li>Jubail, Saudi Arabia</li>
+        <li>Dubai, UAE</li>
+        <li>India (Bangalore)</li>
+      </ul>
+
+      <h2>Send Us a Message</h2>
+      <form onsubmit="event.preventDefault(); alert('Thank you! We will get back to you soon.');">
+        <input required placeholder="Your Name">
+        <input type="email" required placeholder="Your Email">
+        <textarea required placeholder="Message" rows="5"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> FAS Services. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
