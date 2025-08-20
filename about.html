@@ -43,10 +43,11 @@
 
     main { flex:1; }
 
-    /* ✅ Hero Section with background image */
+    /* ✅ Hero Section with colorful background image */
     .hero {
-      background:url('64a8f901-b82f-462c-9a23-e7505e0e14bf.png') no-repeat center center/cover;
-      height:300px;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                  url('b33cb6e9-f2d3-4fb3-a27d-c7b786ec4f43.png') no-repeat center center/cover;
+      height:350px;
       position:relative;
       display:flex;
       align-items:center;
@@ -54,23 +55,21 @@
       color:#fff;
       text-align:center;
     }
-    .hero::after {
-      content:"";
-      position:absolute;
-      top:0; left:0; right:0; bottom:0;
-      background:rgba(0,0,0,0.5); /* overlay for readability */
-    }
     .hero-content {
       position:relative;
       z-index:1;
     }
     .hero-content h1 {
-      font-size:36px;
+      font-size:42px;
       margin:0;
+      font-weight:bold;
     }
     .hero-content p {
       font-size:18px;
       margin-top:10px;
+      max-width:700px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
     section { 
