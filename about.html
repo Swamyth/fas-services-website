@@ -12,7 +12,7 @@
       background:#fff;
       display:flex; 
       flex-direction:column; 
-      min-height:100vh; /* ensures footer stays at bottom */
+      min-height:100vh;
     }
     header { 
       position:fixed; 
@@ -30,7 +30,7 @@
     header nav {
       flex:1;
       display:flex;
-      justify-content:flex-end; /* ✅ prevents cutoff */
+      justify-content:flex-end;
     }
     header nav a { 
       margin:0 10px; 
@@ -41,12 +41,40 @@
     }
     header nav a:hover { color:#1e293b; }
 
-    main {
-      flex:1; /* pushes footer down */
+    main { flex:1; }
+
+    /* ✅ Hero Section with background image */
+    .hero {
+      background:url('64a8f901-b82f-462c-9a23-e7505e0e14bf.png') no-repeat center center/cover;
+      height:300px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      text-align:center;
+    }
+    .hero::after {
+      content:"";
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.5); /* overlay for readability */
+    }
+    .hero-content {
+      position:relative;
+      z-index:1;
+    }
+    .hero-content h1 {
+      font-size:36px;
+      margin:0;
+    }
+    .hero-content p {
+      font-size:18px;
+      margin-top:10px;
     }
 
     section { 
-      padding:100px 20px 60px; 
+      padding:60px 20px; 
       max-width:1000px; 
       margin:0 auto; 
     }
@@ -80,11 +108,15 @@
   </header>
 
   <main>
-    <section>
-      <h1>About FAS Services</h1>
-      <p>Established over 25 years ago, FAS Services has become a trusted provider of engineering-driven solutions 
-      across the energy, oil & gas, power generation, and industrial sectors.</p>
+    <!-- ✅ Hero Section -->
+    <div class="hero">
+      <div class="hero-content">
+        <h1>About FAS Services</h1>
+        <p>Engineering-Driven Industrial Solutions for Over 25 Years</p>
+      </div>
+    </div>
 
+    <section>
       <h2>Our History</h2>
       <p>From a modest beginning in Saudi Arabia, FAS Services has grown into a regional player 
       with multiple offices and a diverse portfolio.</p>
