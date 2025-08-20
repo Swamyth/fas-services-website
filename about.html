@@ -8,8 +8,8 @@
     body { 
       margin:0; 
       font-family: Arial, sans-serif; 
-      color:#1e293b; 
-      background:#fff;
+      background: #f97316; /* Orange background */
+      color:#fff; /* White text */
       display:flex; 
       flex-direction:column; 
       min-height:100vh;
@@ -18,14 +18,18 @@
       position:fixed; 
       top:0; 
       width:100%; 
-      background:#fff; 
-      border-bottom:1px solid #e2e8f0; 
+      background:#f97316; /* Orange header */
+      border-bottom:1px solid rgba(255,255,255,0.3); 
       padding:15px 40px; 
       display:flex; 
       justify-content:space-between; 
       align-items:center; 
       z-index:50; 
       box-sizing:border-box;
+    }
+    header div {
+      font-weight:bold;
+      color:#fff;
     }
     header nav {
       flex:1;
@@ -36,67 +40,45 @@
       margin:0 10px; 
       font-size:14px; 
       font-weight:500; 
-      color:#475569; 
+      color:#fff; 
       text-decoration:none; 
     }
-    header nav a:hover { color:#1e293b; }
+    header nav a:hover { 
+      text-decoration:underline; 
+    }
 
-    main { flex:1; }
-
-    /* ✅ Hero Section with colorful background image */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                  url('b33cb6e9-f2d3-4fb3-a27d-c7b786ec4f43.png') no-repeat center center/cover;
-      height:350px;
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      text-align:center;
-    }
-    .hero-content {
-      position:relative;
-      z-index:1;
-    }
-    .hero-content h1 {
-      font-size:42px;
-      margin:0;
-      font-weight:bold;
-    }
-    .hero-content p {
-      font-size:18px;
-      margin-top:10px;
-      max-width:700px;
-      margin-left:auto;
-      margin-right:auto;
-    }
+    main { flex:1; padding-top:80px; }
 
     section { 
-      padding:60px 20px; 
+      padding:40px 20px; 
       max-width:1000px; 
       margin:0 auto; 
     }
-    h1,h2,h3 { margin-top:0; }
+    h1,h2,h3 { margin-top:0; color:#fff; }
+    p, li { color:#fff; }
+    
     .card { 
-      background:#f8fafc; 
+      background:rgba(255,255,255,0.15); 
       padding:20px; 
       border-radius:10px; 
       margin:20px 0; 
+      color:#fff;
     }
+    ul { padding-left:20px; }
 
+    /* ✅ Blue footer */
     footer { 
       padding:20px; 
-      border-top:1px solid #e2e8f0; 
+      background:#1e40af; /* Blue bottom */
       text-align:center; 
       font-size:14px; 
-      color:#64748b; 
+      color:#fff; 
     }
   </style>
 </head>
 <body>
   <header>
-    <div><strong>FAS Services</strong></div>
+    <div>FAS Services</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -107,15 +89,11 @@
   </header>
 
   <main>
-    <!-- ✅ Hero Section -->
-    <div class="hero">
-      <div class="hero-content">
-        <h1>About FAS Services</h1>
-        <p>Engineering-Driven Industrial Solutions for Over 25 Years</p>
-      </div>
-    </div>
-
     <section>
+      <h1>About FAS Services</h1>
+      <p>Established over 25 years ago, FAS Services has become a trusted provider of engineering-driven solutions 
+      across the energy, oil & gas, power generation, and industrial sectors.</p>
+
       <h2>Our History</h2>
       <p>From a modest beginning in Saudi Arabia, FAS Services has grown into a regional player 
       with multiple offices and a diverse portfolio.</p>
